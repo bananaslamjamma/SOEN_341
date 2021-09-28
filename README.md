@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
@@ -62,3 +63,27 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+=======
+# SOEN_341
+SOEN_341 Web Dev Project
+
+
+Description
+
+
+Objective
+
+
+Core Features
+
+
+Team Members & Info:
+
+Ashiqur Rahman 40096265-AshiswhoIam
+
+Ossama Elbannaoui (40157112|oelbannaoui@gmail.com)
+
+Languages and Techniques:
+
+HTML,CSS,Javascript,php
+>>>>>>> 53b798aaa5a18dbeffd62c78117d391d6bfecd04
