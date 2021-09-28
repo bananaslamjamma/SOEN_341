@@ -14,6 +14,7 @@ Core Features
 Team Members & Info:
 
 Ashiqur Rahman 40096265-AshiswhoIam
+
 Evan Yu - 40112176 | evan.yu6748@gmail.com
 
 Ossama Elbannaoui (40157112|oelbannaoui@gmail.com)
