@@ -19,6 +19,9 @@ Evan Yu - 40112176 | evan.yu6748@gmail.com
 
 Ossama Elbannaoui (40157112|oelbannaoui@gmail.com)
 
+Djamal Namoko (40099428|djamhunter@hotmail.com)
+
+
 Languages and Techniques:
 
 HTML,CSS,Javascript,php
