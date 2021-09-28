@@ -21,6 +21,8 @@ Ossama Elbannaoui (40157112|oelbannaoui@gmail.com)
 
 Djamal Namoko (40099428|djamhunter@hotmail.com)
 
+Rayan Alkayal (40051210|ralkayal@hotmail.com)
+
 
 Languages and Techniques:
 
