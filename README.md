@@ -12,6 +12,7 @@ Core Features
 
 
 Team Members & Info
+Ashiqur Rahman 40096265-AshiswhoIam
 
 Ossama Elbannaoui (40157112|oelbannaoui@gmail.com)
 
