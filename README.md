@@ -12,6 +12,7 @@ Core Features
 
 
 Team Members & Info
+
 Ossama Elbannaoui (40157112|oelbannaoui@gmail.com)
 
 Languages and Techniques
