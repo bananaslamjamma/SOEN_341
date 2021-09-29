@@ -23,6 +23,8 @@ Djamal Namoko (40099428|djamhunter@hotmail.com)
 
 Rayan Alkayal (40051210|ralkayal@hotmail.com)
 
+Abdullah Al-Sayyed (40129164|abdullahas473@gmail.com)
+
 
 Languages and Techniques:
 
