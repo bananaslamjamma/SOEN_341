@@ -1,0 +1,10 @@
+User Stories:
+
+As service providers, we want to the users to have the ability to post questions
+on the website.
+
+As service providers, we want to the users to be able to answer the questions
+of other users.
+
+As service providers, we want to the users to be able to upvote or downvote
+questions as a scoring system.
