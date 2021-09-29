@@ -9,6 +9,9 @@ Objective
 The objective is to create a website similar to stackoverflow.
 
 Core Features
+Allowing a user to post a question
+Allowing a user to post an answer to a question
+Allowing a user to vote (up or down) on questions and answers
 
 
 Team Members & Info:
@@ -23,7 +26,7 @@ Djamal Namoko (40099428|djamhunter@hotmail.com)
 
 Rayan Alkayal (40051210|ralkayal@hotmail.com)
 
-Abdullah Al-Sayyed (40129164|abdullahas473@gmail.com) Guthub: Studyii
+Abdullah Al-Sayyed (40129164|abdullahas473@gmail.com) Github: Studyii
 
 
 Languages and Techniques:
