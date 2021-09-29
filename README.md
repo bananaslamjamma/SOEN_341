@@ -23,7 +23,7 @@ Djamal Namoko (40099428|djamhunter@hotmail.com)
 
 Rayan Alkayal (40051210|ralkayal@hotmail.com)
 
-Abdullah Al-Sayyed (40129164|abdullahas473@gmail.com)
+Abdullah Al-Sayyed (40129164|abdullahas473@gmail.com) Guthub: Studyii
 
 
 Languages and Techniques:
