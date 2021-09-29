@@ -3,10 +3,10 @@ SOEN_341 Web Dev Project
 
 
 Description
-
+The repository contains the work of a Soen 341 project to create a website.
 
 Objective
-
+The objective is to create a website similar to stackoverflow.
 
 Core Features
 
