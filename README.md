@@ -16,12 +16,12 @@ The objective is to create a website similar to stackoverflow.
 
 # Team Members & Info:
 
-* Ashiqur Rahman 40096265-AshiswhoIam
-* Evan Yu - 40112176 | evan.yu6748@gmail.com
-* Ossama Elbannaoui (40157112|oelbannaoui@gmail.com)
-* Djamal Namoko (40099428|djamhunter@hotmail.com)
-* Rayan Alkayal (40051210|ralkayal@hotmail.com)
-* Abdullah Al-Sayyed (40129164|abdullahas473@gmail.com) Github: Studyii
+* Ashiqur Rahman      (40096265 | AshiswhoIam)
+* Evan Yu             (40112176 | evan.yu6748@gmail.com)
+* Ossama Elbannaoui   (40157112 | oelbannaoui@gmail.com)
+* Djamal Namoko       (40099428 | djamhunter@hotmail.com)
+* Rayan Alkayal       (40051210 | ralkayal@hotmail.com)
+* Abdullah Al-Sayyed  (40129164 |abdullahas473@gmail.com) Github: Studyii
 
 
 # Languages and Techniques:
