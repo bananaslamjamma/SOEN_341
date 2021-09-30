@@ -22,7 +22,7 @@ The objective is to create a website similar to stackoverflow.
 * Djamal Namoko       (40099428 | djamhunter@hotmail.com) GitHub: djamh
 * Rayan Alkayal       (40051210 | ralkayal@hotmail.com) GitHub: Rayan99k
 * Abdullah Al-Sayyed  (40129164 |abdullahas473@gmail.com) GitHub: Studyii
-
+* Ye Tun              (40007224 |y_tu@live.concordia.caa) GitHub: 4rierr
 
 # Languages and Techniques:
 
