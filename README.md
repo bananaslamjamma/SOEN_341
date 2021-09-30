@@ -16,7 +16,7 @@ The objective is to create a website similar to stackoverflow.
 
 # Team Members & Info:
 
-* Ashiqur Rahman      (40096265 | AshiswhoIam) GitHub: AshiswhoIam
+* Ashiqur Rahman      (40096265 | ashlegitimate@outlook.com) GitHub: AshiswhoIam
 * Evan Yu             (40112176 | evan.yu6748@gmail.com) GitHub: bananaslamjamma
 * Ossama Elbannaoui   (40157112 | oelbannaoui@gmail.com) GitHub: BasedSnake
 * Djamal Namoko       (40099428 | djamhunter@hotmail.com) GitHub: djamh
