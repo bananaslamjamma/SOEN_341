@@ -33,54 +33,14 @@ We would like to extend our thanks to the following sponsors for funding Laravel
 
 ### Premium Partners
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[CMS Max](https://www.cmsmax.com/)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
+# Objective
+The objective is to create a website similar to stackoverflow.
 
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-
-# SOEN_341
-SOEN_341 Web Dev Project
-
-
-# Description
-The website is to be similar to Stack Overflow and will embody similar core features for all web users.
 
 # Objective
 The objective is to create a website similar to stackoverflow.
 
-## Core Features
-* Asking and answering questions
-* Voting on the answers
-* Accepting the best answer
 
-
-# Team Members & Info:
-* (Team Leader): Evan Yu             (40112176 | evan.yu6748@gmail.com) GitHub: bananaslamjamma
 
 * Ashiqur Rahman      (40096265 | ashlegitimate@outlook.com) GitHub: AshiswhoIam
 * Ossama Elbannaoui   (40157112 | oelbannaoui@gmail.com) GitHub: BasedSnake
@@ -89,7 +49,6 @@ The objective is to create a website similar to stackoverflow.
 * Abdullah Al-Sayyed  (40129164 |abdullahas473@gmail.com) GitHub: Studyii
 * Ye Tun              (40007224 | y_tu@live.concordia.ca) GitHub: 4rierr
 
-# Languages and Techniques:
 
 * HTML
 * CSS
