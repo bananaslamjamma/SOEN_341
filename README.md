@@ -9,9 +9,9 @@ The website is to be similar to Stack Overflow and will embody similar core feat
 The objective is to create a website similar to stackoverflow.
 
 ## Core Features
-* Allowing a user to post a question
-* Allowing a user to post an answer to a question
-* Allowing a user to vote (up or down) on answers, which determines/ accepts the best answer.
+* Asking and answering questions
+* Voting on the answers
+* Accepting the best answer
 
 
 # Team Members & Info:
