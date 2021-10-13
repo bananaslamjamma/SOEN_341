@@ -14,15 +14,15 @@
     <div class="container">
             <div class="navbar">
                 <div class="logo">
-                    <a href="index.html"><img src="images/home.png" width="20px"></a>
+                    <a href='index'><img src="public/images/home.png" width="20px"></a>
                 </div>
                 <nav>
                     <ul id="MenuItems">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="account.html">Account</a></li>
+                        <li><a href='index'>Home</a></li>
+                        <li><a href='account'>Account</a></li>
                     </ul>
                 </nav>
-                <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+                <img src="public/images/menu.png" class="menu-icon" onclick="menutoggle()">
            </div> 
         </div>
     
@@ -31,7 +31,7 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <img src="images/login.jpg" width = "100%">
+                    <img src="public/images/login.jpg" width = "100%">
                 </div>
                 <div class="col">
                     <div class="form-container">
