@@ -14,7 +14,7 @@
     <div class="container">
             <div class="navbar">
                 <div class="logo">
-                    <a href='index'><img src="/public/images/home.png" width="20px"></a>
+                    <a href='index'><img src="public/images/home.png" width="20px"></a>
                 </div>
                 <nav>
                     <ul id="MenuItems">
