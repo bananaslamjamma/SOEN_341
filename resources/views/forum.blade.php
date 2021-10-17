@@ -33,14 +33,14 @@
 </header>
 
 
-<div style="text-align:center;color:white" >
+<div style="text-align:center;color:white;" >
 <h1 > Ask a question</h1> 
 <form action="/forum" method="post">
-<input type="text" placeholder="Title" id="title" name="title">
+@csrf
+<input style="height:40px;width:200px;font-size:30px" type="text" placeholder="Title" id="title" name="title">
 <div>
-<textarea name="comments" id="comments" style="font-family:sans-serif;font-size:1.2em;">
-Your question....
-</textarea>
+<input style="height:200px;width:1000px;font-size:50px;text-align:top" placeholder="Content" name="comments" id="comments" >
+</input>
 </div>
 <input type="submit" value="ASK">
 </form>  
@@ -54,7 +54,7 @@ Your question....
 <div style="text-align:center;color:white;background:black">
             <div class="content">
                 <div style="font-size:100px;">
-                    Others questions
+                    Questions
                     <pre></pre>
                 </div>
                 
