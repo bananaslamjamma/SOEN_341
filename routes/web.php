@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 Route::get('/home', function () {
@@ -29,3 +29,19 @@ Route::get('/login', function () {
     return view('account');
 });
 
+Route::get('/forum', function () {
+
+    $questions = [
+        ['id'=>'4540', 'name'=> 'rango', 'title'=>'question test', 'content'=>'blablabla'],
+        ['id'=>'345435', 'name'=> 'isafame', 'title'=>'question test gregre', 'content'=>'blablabla'],
+        ['id'=>'4540', 'name'=> 'darwin', 'title'=>'fians', 'content'=>'blablabla']
+    ];
+
+    return view('forum',['questions' => $questions]);
+});
+
+//question id route
+Route::get('/forum/{qid}', function ($qid) {
+
+    return view('question',['qid' => $qid]);
+});

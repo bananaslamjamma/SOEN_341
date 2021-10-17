@@ -32,6 +32,13 @@
 
 </header>
 
+<div style="text-align:center" >
+
+<h1 class="title", style="color:white;font-size:300%"> 
+    Question {{$qid}}
+</h1>
+
+</div>
 
 </body>
 </html>
