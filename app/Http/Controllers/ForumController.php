@@ -8,7 +8,7 @@ use App\Models\Question;
 class ForumController extends Controller
 {
     public function index(){
-        
+
         $questions = Question::all();
     
         return view('forum',['questions' => $questions]);
@@ -18,7 +18,9 @@ class ForumController extends Controller
 
     public function show($qid){
 
-        return view('question',['qid' => $qid]);
+        $requestedQ = Question::find($qid);
+
+        return view('question',['question' => $requestedQ]);
     }
 
 }

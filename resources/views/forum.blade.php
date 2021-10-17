@@ -61,8 +61,8 @@ Your question....
 
                 @foreach($questions as $questions)
                   <div style="font-size:40px;">
-                  issue {{ $questions->id}} from {{ $questions->name}} - {{ $questions->title }} <br>
-                    {{ $questions->content }}
+                  issue <a href="/forum/{{ $questions->id}}"> {{ $questions->id}}</a> from {{ $questions->name}} - {{ $questions->title }} <br>
+                  
                     <pre>
 
                     </pre>                  

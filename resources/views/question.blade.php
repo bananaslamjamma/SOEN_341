@@ -32,12 +32,23 @@
 
 </header>
 
-<div style="text-align:center" >
+<div style="text-align:center;background:black" >
 
-<h1 class="title", style="color:white;font-size:300%"> 
-    Question - {{$qid}}
-</h1>
-
+<div class="title", style="color:white;font-size:700%"> 
+    Issue - {{$question->id}}
+</div> 
+<div class="title", style="color:white;font-size:200%"> 
+    From user {{$question->name}}
+</div>
+<br>
+<div class="title", style="color:white;font-size:400%"> 
+    {{$question->title}}
+</div> 
+<br>
+<br>
+<div class="title", style="color:white;font-size:200%"> 
+   {{$question->content}}
+</div> 
 </div>
 
 </body>
