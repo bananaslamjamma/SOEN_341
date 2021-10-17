@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>SOEN341 | Account</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -14,7 +14,7 @@
     <div class="container">
             <div class="navbar">
                 <div class="logo">
-                    <a href='index'><img src="public/images/home.png" width="20px"></a>
+                    <a href='index'><img src="C:\Users\djamh\github\SOEN_341\public\images\home.png" width="20px"></a>
                 </div>
                 <nav>
                     <ul id="MenuItems">
