@@ -61,7 +61,8 @@ Your question....
 
                 @foreach($questions as $questions)
                   <div style="font-size:40px;">
-                    {{ $questions['id'] }} - {{ $questions['name'] }}- {{ $questions['title'] }}
+                  issue {{ $questions->id}} from {{ $questions->name}} - {{ $questions->title }} <br>
+                    {{ $questions->content }}
                     <pre>
 
                     </pre>                  

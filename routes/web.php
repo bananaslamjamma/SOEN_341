@@ -29,19 +29,12 @@ Route::get('/login', function () {
     return view('account');
 });
 
-Route::get('/forum', function () {
 
-    $questions = [
-        ['id'=>'4540', 'name'=> 'rango', 'title'=>'question test', 'content'=>'blablabla'],
-        ['id'=>'345435', 'name'=> 'isafame', 'title'=>'question test gregre', 'content'=>'blablabla'],
-        ['id'=>'4540', 'name'=> 'darwin', 'title'=>'fians', 'content'=>'blablabla']
-    ];
 
-    return view('forum',['questions' => $questions]);
-});
+use App\Http\Controllers\ForumController;
+
+///new route to controller
+Route::get('/forum', [ForumController::class,'index']);
 
 //question id route
-Route::get('/forum/{qid}', function ($qid) {
-
-    return view('question',['qid' => $qid]);
-});
+Route::get('/forum/{qid}', [ForumController::class,'show']);
