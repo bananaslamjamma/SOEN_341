@@ -19,21 +19,27 @@ class ForumController extends Controller
 // this shows all the questions with the given id
     public function show($qid){
 
-        $requestedQ = Question::findofFail($qid);
+        $requestedQ = Question::findorFail($qid);
 
         return view('question',['question' => $requestedQ]);
     }
 
 // redirects to home after post request from the form
+// creates a new instance of a question with infos taken from the question form
     public function store(){
 
         $question = new Question();
 
+        
         $question->title = request('title');
+        $question->name = request('name');
         $question->content = request('content');
 
-        error_log($question);
-        
+        //error_log($question); used to debug, will show the value of title,name and content in terminal
+
+        $question-> save();
+
+
         return redirect('/forum');
     }
 
