@@ -19,7 +19,7 @@
 <ul>
 
 <li><a href="/home"> Home</a></li>
-<li><a href=""> Forum</a></li>
+<li><a href="/forum"> Forum</a></li>
 <li><a href=""> Team Info</a></li>
 <li><a href="/login"> login</a></li>
 <li><a href="/profile"> Profile</a></li>
