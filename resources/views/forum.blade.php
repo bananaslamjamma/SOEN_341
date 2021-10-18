@@ -61,12 +61,16 @@
                 
 
                 @foreach($questions as $questions)
-                  <div style="font-size:40px;">
+                  <div style="font-size:40px;
+                            background-color: #F7F9F7;
+                            border: 1px solid #94BD53;
+                            color: inherit;
+                            padding: 5px;
+                            margin: 0px;
+                            color:black">
                   issue <a href="/forum/{{ $questions->id}}"> {{ $questions->id}}</a> from {{ $questions->name}} - {{ $questions->title }} <br>
                   
-                    <pre>
-
-                    </pre>                  
+                    <br>                
                 </div>
                 @endforeach
 

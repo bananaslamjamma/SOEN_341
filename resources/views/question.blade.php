@@ -33,7 +33,7 @@
 
 </header>
 
-<div style="text-align:center;background:black" >
+<div style="text-align:center;" >
 
     <div class="title", style="color:white;font-size:700%"> 
     Issue - {{$question->id}}
@@ -41,13 +41,22 @@
     <div class="title", style="color:white;font-size:200%"> 
     From user {{$question->name}}
     </div>
-<br>
-    <div class="title", style="color:white;font-size:400%"> 
+ <br>
+ <div style="
+             background-color: #F7F9F7;
+            border: 1px solid #94BD53;
+             padding: 50px;
+             margin: 100px;
+             margin-left:300px;
+             margin-right:300px;
+             color:black">
+    <div class="title", style="font-size:400%"> 
     {{$question->title}}
     </div> 
-<br>
-<br>
-    <div class="title", style="color:white;font-size:200%"> 
+ <br>
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ <br>
+    <div class="title", style="font-size:200%"> 
    {{$question->content}}
     </div> 
 
@@ -55,7 +64,7 @@
 <br>
 
 
-<div style="text-align:center;color:white;" >
+<div style="text-align:center;color:white;background:black" >
 <h1 > Answer this question</h1> 
 <form action="/forum/{{$question->id}}" method="post">
 @csrf
@@ -71,18 +80,24 @@
 
 
 {{-- simple view of all the answers--}}
-<div style="text-align:center;background:black;color:white" >
+<div style="text-align:center;color:black" >
 @foreach($answer as $answer)
-                  <div style="font-size:50px;">
+                  <div style="font-size:50px;
+                                background-color: #F7F9F7;
+                                border: 1px solid #94BD53;
+                                padding: 50px;
+                                margin: 100px;
+                                margin-left:300px;
+                                margin-right:300px;
+                                color:black;
+                                ">
                   answer from {{ $answer->name}} <br>
 
                   <div style="font-size:30px;">
                   {{ $answer->content }} 
                     </div>
 
-                    <pre>
-
-                    </pre>                  
+                                    
                 </div>
                 @endforeach
 
