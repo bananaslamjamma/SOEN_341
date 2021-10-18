@@ -38,8 +38,9 @@
 <form action="/forum" method="post">
 @csrf
 <input style="height:40px;width:200px;font-size:30px" type="text" placeholder="Title" id="title" name="title">
+<input style="height:40px;width:200px;font-size:30px" type="text" placeholder="Username" id="name" name="name">
 <div>
-<input style="height:200px;width:1000px;font-size:50px;text-align:top" placeholder="Content" name="comments" id="comments" >
+<input style="height:200px;width:1000px;font-size:50px;text-align:top" placeholder="Describe your issue" name="comments" id="comments" >
 </input>
 </div>
 <input type="submit" value="ASK">
