@@ -14,9 +14,31 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 Route::get('/home', function () {
     return view('home');
 });
+
+Route::get('/profile', function () {
+    return view('profile');
+});
+
+Route::get('/login', function () {
+    return view('account');
+});
+
+
+
+use App\Http\Controllers\ForumController;
+
+///new route to controller
+Route::get('/forum', [ForumController::class,'index']);
+
+Route::post('/forum', [ForumController::class,'storeq']);
+
+//question id route
+Route::get('/forum/{qid}', [ForumController::class,'show']);
+
+Route::post('/forum/{qid}', [ForumController::class,'storea']);
