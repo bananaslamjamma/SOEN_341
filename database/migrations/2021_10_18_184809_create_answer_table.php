@@ -14,7 +14,7 @@ class CreateAnswerTable extends Migration
     public function up()
     {
         //mhoudl write answers instead of answer to make it easier, otherwise change name in php admin
-        Schema::create('answer', function (Blueprint $table) {
+        Schema::create('answers', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
             $table->integer('qid');
@@ -30,6 +30,6 @@ class CreateAnswerTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('answer');
+        Schema::dropIfExists('answers');
     }
 }

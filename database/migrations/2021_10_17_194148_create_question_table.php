@@ -14,7 +14,7 @@ class CreateQuestionTable extends Migration
     public function up()
     {
         //mhoudl write questions instead of question to make it easier, otherwise change name in php admin
-        Schema::create('question', function (Blueprint $table) {
+        Schema::create('questions', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
             $table->string('name');
@@ -31,6 +31,6 @@ class CreateQuestionTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('question');
+        Schema::dropIfExists('questions');
     }
 }
