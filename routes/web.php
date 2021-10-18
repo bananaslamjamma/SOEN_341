@@ -36,7 +36,9 @@ use App\Http\Controllers\ForumController;
 ///new route to controller
 Route::get('/forum', [ForumController::class,'index']);
 
-Route::post('/forum', [ForumController::class,'store']);
+Route::post('/forum', [ForumController::class,'storeq']);
 
 //question id route
 Route::get('/forum/{qid}', [ForumController::class,'show']);
+
+Route::post('/forum/{qid}', [ForumController::class,'storea']);
