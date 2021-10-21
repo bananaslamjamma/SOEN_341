@@ -13,6 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//default routes for authentication
+//i.e login, register
+Auth::routes();
+
 Route::get('/', function () {
     return view('home');
 });
@@ -23,10 +27,6 @@ Route::get('/home', function () {
 
 Route::get('/profile', function () {
     return view('profile');
-});
-
-Route::get('/login', function () {
-    return view('account');
 });
 
 
