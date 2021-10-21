@@ -8,7 +8,11 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
-class User extends Authenticatable
+use Cog\Contracts\Love\Liker\Models\Liker as LikerContract;
+use Cog\Laravel\Love\Liker\Models\Traits\Liker;
+use Cog\Laravel\Love\Liker\Models\Traits\Liker;
+
+class User extends Authenticatable implements LikerContract
 {
     use HasApiTokens, HasFactory, Notifiable;
 
