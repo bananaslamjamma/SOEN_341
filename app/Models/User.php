@@ -10,7 +10,7 @@ use Laravel\Sanctum\HasApiTokens;
 
 use Cog\Contracts\Love\Liker\Models\Liker as LikerContract;
 use Cog\Laravel\Love\Liker\Models\Traits\Liker;
-use Cog\Laravel\Love\Liker\Models\Traits\Liker;
+
 
 class User extends Authenticatable implements LikerContract
 {
