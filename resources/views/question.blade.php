@@ -98,6 +98,8 @@
 
 
 <div style="text-align:center;color:white;background:black" >
+@if (Auth::check()) 
+
 <h1 > Answer this question</h1> 
 <form action="/forum/{{$question->id}}" method="post">
 @csrf
@@ -110,6 +112,13 @@
 </div>
 <br>
 
+@else
+    <h1 > You must be logged in to answer a question</h1> <br>
+    <h1 ><a class="nav-link" href="{{ route('login') }}">Login</a></h1>
+
+
+
+@endif
 
 {{-- simple view of all the answers--}}
 <div style="text-align:center;color:black" >

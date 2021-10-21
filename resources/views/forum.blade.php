@@ -65,8 +65,9 @@
 
 </header>
 
-
-<div style="text-align:center;color:white;" >
+ <div style="text-align:center;color:white;" >
+@if (Auth::check()) {
+   
 <h1 > Ask a question</h1> 
 <form action="/forum" method="post">
 @csrf
@@ -77,6 +78,15 @@
 </div>
 <input type="submit" value="ASK">
 </form>  
+
+}
+@else{
+    <h1 > You must be logged in to ask a question</h1> <br>
+    <a class="nav-link" href="{{ route('login') }}">Login</a>
+
+}
+
+@endif
 </div>
 
 <pre>
