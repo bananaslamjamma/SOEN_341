@@ -32,9 +32,27 @@
 
 </header>
 
+<style>
+.triangle-up {
 
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 10px solid #555;
+}
+.triangle-down {
+
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 10px solid #555;
+}
+</style>
 <div style="text-align:center;color:white;" >
 <h1 > Ask a question</h1> 
+<p>Top counter: 15</p>
+<button style><div class="triangle-up"></div> </i></button>
+<p></p>
+<button style><div class="triangle-down"></div></i></button>
+<p>Bottom counter: 20</p>
 <form action="/forum" method="post">
 @csrf
 <input style="height:40px;width:200px;font-size:30px" type="text" placeholder="Title" id="title" name="title">
