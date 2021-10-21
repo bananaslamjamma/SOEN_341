@@ -44,4 +44,6 @@ Route::get('/forum/{qid}', [ForumController::class,'show']);
 Route::post('/forum/{qid}', [ForumController::class,'storea']);
 Auth::routes();
 
+
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

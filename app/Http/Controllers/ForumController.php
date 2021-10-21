@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\Question;
 use App\Models\Answer;
@@ -34,7 +35,7 @@ class ForumController extends Controller
         $question = new Question();
 
         $question->title = request('title');
-        $question->name = request('name');
+        $question->name = Auth::user()->name;//request('name'); the name of the user will now be taken from authentification
         $question->content = request('content');
 
         //error_log($question); used to debug, will show the value of title,name and content in terminal
@@ -55,7 +56,7 @@ class ForumController extends Controller
         $answer = new Answer();
 
         $answer->qid = $qid;
-        $answer->name = request('name');
+        $answer->name = Auth::user()->name;//request('name'); the name for the answer will now be taken from authentification
         $answer->content = request('content');
 
         //error_log($answer); used to debug, will show the answer in terminal
