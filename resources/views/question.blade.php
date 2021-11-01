@@ -180,16 +180,20 @@
                   <div style="font-size:30px;">
                   {{ $answer->content }} 
                     </div>
+
+                    @if (Auth::check()) 
                     <div>
-                    @if (Auth::check())
+
                     @if ($question->name==Auth::user()->name )
                     <form action="/forum/bestanswer/{{$answer->id}}" method="post">
                     @csrf
                     <input type="submit" value="Select as best Answer">
                     </form>  
+
                     @endif
-                    @endif
+                    
                     </div>
+                    @endif
 
                                     
                 </div>
