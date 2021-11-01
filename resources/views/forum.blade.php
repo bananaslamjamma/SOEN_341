@@ -16,35 +16,76 @@
 
 
 <nav>
-<ul>
+                <ul>
 
-<li><a href="/home"> Home</a></li>
-<li><a href="/forum"> Forum</a></li>
-<li><a href=""> Team Info</a></li>
-<li><a href="/login"> login</a></li>
-<li><a href="/profile"> Profile</a></li>
+                    <li><a href="/home"> Home</a></li>
+                    <li><a href="/forum"> Forum</a></li>
+                    <li><a href=""> Team Info</a></li>
+                    <!-- Right Side Of Navbar -->
 
-</ul>
-</nav>
+                    <!-- Authentication Links -->
+                    @guest
+                    @if (Route::has('login'))
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                    </li>
+                    @endif
+
+                    @if (Route::has('register'))
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                    </li>
+                    @endif
+                    @else
+                    <li class="nav-item dropdown">
+                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            {{ Auth::user()->name }}
+                        </a>
+
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                {{ __('Logout') }}
+                            </a>
+
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
+                        </div>
+                    </li>
+                    @endguest
+
+                    <li><a href="/profile"> Profile</a></li>
+
+                </ul>
+            </nav>
 
 
 </div>
 
 </header>
 
-
-<div style="text-align:center;color:white;" >
+ <div style="text-align:center;color:white;" >
+@if (Auth::check()) 
+   
 <h1 > Ask a question</h1> 
 <form action="/forum" method="post">
 @csrf
 <input style="height:40px;width:200px;font-size:30px" type="text" placeholder="Title" id="title" name="title">
-<input style="height:40px;width:200px;font-size:30px" type="text" placeholder="Username" id="name" name="name">
 <div>
 <input style="height:200px;width:1000px;font-size:50px;text-align:top" placeholder="Describe your issue" name="content" id="content" >
 </input>
 </div>
 <input type="submit" value="ASK">
 </form>  
+
+@else{
+    <h1 > You must be logged in to ask a question</h1> <br>
+    <a class="nav-link" href="{{ route('login') }}">Login</a>
+
+}
+
+@endif
 </div>
 
 <pre>
