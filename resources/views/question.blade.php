@@ -180,7 +180,7 @@
                   <div style="font-size:30px;">
                   {{ $answer->content }} 
                     </div>
-                    
+
                     @if (Auth::check()) 
                     <div>
                     
@@ -190,9 +190,7 @@
                     <input type="submit" value="Select as best Answer">
                     </form>  
                 
-                    
                     @endif
-                    
                     
                     </div>
                     @endif
