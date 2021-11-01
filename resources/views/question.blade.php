@@ -180,7 +180,10 @@
                   <div style="font-size:30px;">
                   {{ $answer->content }} 
                     </div>
+                    
+                    @if (Auth::check()) 
                     <div>
+                    
                     @if ($question->name==Auth::user()->name )
                     <form action="/forum/bestanswer/{{$answer->id}}" method="post">
                     @csrf
@@ -189,7 +192,10 @@
                 
                     
                     @endif
+                    
+                    
                     </div>
+                    @endif
 
                                     
                 </div>
