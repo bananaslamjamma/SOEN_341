@@ -181,13 +181,13 @@
                   {{ $answer->content }} 
                     </div>
                     <div>
+                    @if (Auth::check())
                     @if ($question->name==Auth::user()->name )
                     <form action="/forum/bestanswer/{{$answer->id}}" method="post">
                     @csrf
                     <input type="submit" value="Select as best Answer">
                     </form>  
-                
-                    
+                    @endif
                     @endif
                     </div>
 
