@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\Question;
 use App\Models\Answer;
+use App\Models\Bestanswer;
 
 class ForumController extends Controller
 {
@@ -23,8 +25,10 @@ class ForumController extends Controller
         $requestedQ = Question::findorFail($qid);
         // find answer with correct qid
         $requestedA = Answer::where('qid', $qid )->get();
+        //find best answer with correct qid
+        $bestA = BestAnswer::where('qid', $qid )->get();
 
-        return view('question',['question' => $requestedQ, 'answer' => $requestedA ]);
+        return view('question',['question' => $requestedQ, 'answer' => $requestedA , 'best'=> $bestA]);
     }
 
 // redirects to home after post request from the form
@@ -34,7 +38,7 @@ class ForumController extends Controller
         $question = new Question();
 
         $question->title = request('title');
-        $question->name = request('name');
+        $question->name = Auth::user()->name;//request('name'); the name of the user will now be taken from authentification
         $question->content = request('content');
 
         //error_log($question); used to debug, will show the value of title,name and content in terminal
@@ -55,7 +59,7 @@ class ForumController extends Controller
         $answer = new Answer();
 
         $answer->qid = $qid;
-        $answer->name = request('name');
+        $answer->name = Auth::user()->name;//request('name'); the name for the answer will now be taken from authentification
         $answer->content = request('content');
 
         //error_log($answer); used to debug, will show the answer in terminal
@@ -66,4 +70,39 @@ class ForumController extends Controller
         
     }
 
+    //////neee to implement
+    // need to take question id an anser id and put them into best answer table
+    public function bestanswer($aid){
+    
+        
+        // find answer with correct qid
+        $requestedA = Answer::findorFail($aid);
+
+        $qid= $requestedA->qid;
+
+
+        if (Bestanswer::where('qid', $qid )->exists()) {
+
+            Bestanswer::where('qid', $qid)->delete();
+        }
+       
+        //this will create an new answer, with the qid of the question
+        $bestanswer = new Bestanswer();
+
+        $bestanswer->aid = $aid;
+       $bestanswer->qid = $qid;
+
+       $bestanswer->name = $requestedA->name;
+       $bestanswer->content = $requestedA->content;
+       
+
+        error_log($bestanswer); //used to debug, will show the answer in terminal
+        $bestanswer-> save();
+
+        return redirect("/forum/$qid");
+    }
+    
+
+
 }
+

@@ -63,8 +63,6 @@
 
 </div>
 
-</header>
-
 <style>
 .triangle-up {
 
@@ -79,23 +77,30 @@
     border-top: 10px solid #555;
 }
 </style>
-<div style="text-align:center;color:white;" >
+</header>
+
+
+ <div style="text-align:center;color:white;" >
+@if (Auth::check()) 
+
 <h1 > Ask a question</h1> 
-<p>Top counter: 15</p>
-<button style><div class="triangle-up"></div> </i></button>
-<p></p>
-<button style><div class="triangle-down"></div></i></button>
-<p>Bottom counter: 20</p>
 <form action="/forum" method="post">
 @csrf
 <input style="height:40px;width:200px;font-size:30px" type="text" placeholder="Title" id="title" name="title">
-<input style="height:40px;width:200px;font-size:30px" type="text" placeholder="Username" id="name" name="name">
 <div>
 <input style="height:200px;width:1000px;font-size:50px;text-align:top" placeholder="Describe your issue" name="content" id="content" >
 </input>
 </div>
 <input type="submit" value="ASK">
 </form>  
+
+@else{
+    <h1 > You must be logged in to ask a question</h1> <br>
+    <a class="nav-link" href="{{ route('login') }}">Login</a>
+
+}
+
+@endif
 </div>
 
 <pre>

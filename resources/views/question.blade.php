@@ -3,7 +3,10 @@
 <head>
 <title> Soen 341 homepage </title>
 <meta charset="UTF-8"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="/css/main.css">
+
+
 
 </head>
 
@@ -13,6 +16,7 @@
 
 <div class="content">
 <h2 class="left">Soen OverFlow</h2>
+
 
 
 <nav>
@@ -93,24 +97,71 @@
    {{$question->content}}
     </div> 
 
+
+
+@if (Auth::check()) 
+
+<p class="like" id="like">  <i class="fa fa-heart" style="color:red;font-size:200%" ></i>this is not implemented,only an idea/draft</p>
+<p class="dislike" id="dislike"><i class="fa fa-heart" style="color:black;font-size:200%" ></i></p>
+@endif
+
+
 </div>
-<br>
+
+
+@foreach($best as $best)
+                  <div style="font-size:50px;
+                                background-color: #F7F9F7;
+                                border: 1px solid #94BD53;
+                                padding: 50px;
+                                margin: 100px;
+                                margin-left:300px;
+                                margin-right:300px;
+                                color:black;
+                                ">
+                   Best answer<br>
+                   <div style="font-size:40px;">
+                  from {{ $best->name}} 
+                    </div><br>
+
+                  <div style="font-size:30px;">
+                  {{ $best->content }} 
+                    </div>
+                    
+                    </div>
+
+                                    
+                </div>
+                @endforeach
+
+
+                  
+               
 
 
 <div style="text-align:center;color:white;background:black" >
+@if (Auth::check()) 
+
 <h1 > Answer this question</h1> 
+
 <form action="/forum/{{$question->id}}" method="post">
 @csrf
-<input style="height:40px;width:200px;font-size:30px" type="text" placeholder="Username" id="name" name="name">
 <div>
 <input style="height:200px;width:1000px;font-size:50px;text-align:top" placeholder="Your answer" name="content" id="content" >
 </input>
 </div>
-<input type="submit" value="ASK">
+<input type="submit" value="Answer">
 </form>  
 </div>
 <br>
 
+@else
+    <h1 > You must be logged in to answer a question</h1> <br>
+    <h1 ><a class="nav-link" href="{{ route('login') }}">Login</a></h1>
+
+
+
+@endif
 
 {{-- simple view of all the answers--}}
 <div style="text-align:center;color:black" >
@@ -130,6 +181,20 @@
                   {{ $answer->content }} 
                     </div>
 
+                    @if (Auth::check()) 
+                    <div>
+
+                    @if ($question->name==Auth::user()->name )
+                    <form action="/forum/bestanswer/{{$answer->id}}" method="post">
+                    @csrf
+                    <input type="submit" value="Select as best Answer">
+                    </form>  
+
+                    @endif
+                    
+                    </div>
+                    @endif
+
                                     
                 </div>
                 @endforeach
@@ -138,4 +203,5 @@
 
 
 </body>
+
 </html>
