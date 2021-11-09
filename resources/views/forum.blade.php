@@ -63,11 +63,26 @@
 
 </div>
 
+<style>
+.triangle-up {
+
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 10px solid #555;
+}
+.triangle-down {
+
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 10px solid #555;
+}
+</style>
 </header>
+
 
  <div style="text-align:center;color:white;" >
 @if (Auth::check()) 
-   
+
 <h1 > Ask a question</h1> 
 <form action="/forum" method="post">
 @csrf
