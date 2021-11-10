@@ -1,0 +1,20 @@
+language: php
+
+php:
+  - 7.3
+  - 7.4
+
+services:
+- mysql # will init MySQL 
+
+before_script:
+  - mysql -e 'create database stackoverflow;' # will run this command
+  - composer install
+  - cp .env.example .env
+  - php artisan key:generate
+  - php artisan migrate --seed
+
+script:
+  - vendor/bin/phpunit
+
+
