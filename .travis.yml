@@ -1,5 +1,7 @@
 language: php
 
+#note this is for linux systems
+
 php:
   - 7.3
   - 7.4
@@ -15,7 +17,7 @@ cache:
 before_script:
   - mysql -e 'create database stackoverflow;' # will run this command
   - composer update
-  # cp .env.example .env --ignore for the time being
+  - cp .env.travis .env # to generate env file, not really needed, since env is publically avail (should not be tho)
   - php artisan key:generate
   - php artisan migrate --seed
 
