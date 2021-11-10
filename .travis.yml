@@ -7,10 +7,15 @@ php:
 services:
 - mysql # will init MySQL 
 
+cache:
+  directories:
+    - node_modules
+    - vendor
+
 before_script:
   - mysql -e 'create database stackoverflow;' # will run this command
   - composer update
-  - cp .env.example .env
+  # cp .env.example .env --ignore for the time being
   - php artisan key:generate
   - php artisan migrate --seed
 
