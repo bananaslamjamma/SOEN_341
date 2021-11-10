@@ -9,7 +9,7 @@ services:
 
 before_script:
   - mysql -e 'create database stackoverflow;' # will run this command
-  - composer install
+  - composer update
   - cp .env.example .env
   - php artisan key:generate
   - php artisan migrate --seed
