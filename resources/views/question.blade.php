@@ -99,11 +99,6 @@
 
 
 
-@if (Auth::check()) 
-
-<p class="like" id="like">  <i class="fa fa-heart" style="color:red;font-size:200%" ></i>this is not implemented,only an idea/draft</p>
-<p class="dislike" id="dislike"><i class="fa fa-heart" style="color:black;font-size:200%" ></i></p>
-@endif
 
 
 </div>
@@ -179,6 +174,13 @@
 
                   <div style="font-size:30px;">
                   {{ $answer->content }} 
+                  
+                        <form action="{{ route('answer.likes', $answer) }}" method ="post" class="mr-1">
+                        @csrf
+                            <button type="submit" class="text-blue-500">UpVote</button>
+                        </form>
+
+                      <span>{{ $answer->likes->count() }}</span>
                     </div>
 
                     @if (Auth::check()) 
