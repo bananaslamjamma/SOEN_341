@@ -49,3 +49,4 @@ Auth::routes();
 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::post('/answers/{answer}/likes', [AnswerLikeController::class,'store'])->name('answer.likes');
