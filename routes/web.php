@@ -41,4 +41,18 @@ Route::post('/forum', [ForumController::class,'storeq']);
 //question id route
 Route::get('/forum/{qid}', [ForumController::class,'show']);
 
+<<<<<<< Updated upstream
 Route::post('/forum/{qid}', [ForumController::class,'storea']);
+=======
+Route::post('/forum/{qid}', [ForumController::class,'storea']);
+Route::post('/forum/bestanswer/{aid}', [ForumController::class,'bestanswer']);
+Auth::routes();
+
+Route::put('/like/{votes}', 'UserLikeController@like')->name('votes.upVote');
+Route::put('/unlike/{votes}', 'UserLikeController@unlike')->name('votes.downVote');
+
+
+
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+>>>>>>> Stashed changes
