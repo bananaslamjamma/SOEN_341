@@ -40,13 +40,16 @@ Route::post('/forum', [ForumController::class,'storeq']);
 
 //question id route
 Route::get('/forum/{qid}', [ForumController::class,'show']);
-
 Route::post('/forum/{qid}', [ForumController::class,'storea']);
 Route::post('/forum/bestanswer/{aid}', [ForumController::class,'bestanswer']);
+
+//upvote/downvotes
+Route::put('/votesUp/{vote}', 'App\Http\Controllers\ForumController@upVote')->name('count.upVote');
+Route::put('/votesDown/{vote}', 'App\Http\Controllers\ForumController@downVote')->name('count.downVote');
 Auth::routes();
 
 
 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::post('/answers/{answer}/likes', [AnswerLikeController::class,'store'])->name('answer.likes');
+//Route::post('/answers/{answer}/likes', [AnswerLikeController::class,'store'])->name('answer.likes');

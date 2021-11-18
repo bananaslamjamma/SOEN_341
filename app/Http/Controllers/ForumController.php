@@ -19,6 +19,24 @@ class ForumController extends Controller
     }
 
 
+    public function upVote(Request $request, $qid){
+        $requestedA = Answer::findorFail($qid);
+        $return_qid= $requestedA->qid;
+        Answer::find($qid)->increment('likes', 1);
+        //for a solution to do this via async (use ajax)
+        return redirect("/forum/$return_qid");
+    } 
+
+
+    public function downVote(Request $request, $qid){
+        $requestedA = Answer::findorFail($qid);
+        $return_qid= $requestedA->qid;
+        Answer::find($qid)->decrement('likes', 1);
+        //for a solution to do this via async (use ajax)
+        return redirect("/forum/$return_qid");
+    } 
+
+
 // this shows all the questions with the given id
     public function show($qid){
 
@@ -27,6 +45,8 @@ class ForumController extends Controller
         $requestedA = Answer::where('qid', $qid )->get();
         //find best answer with correct qid
         $bestA = BestAnswer::where('qid', $qid )->get();
+        
+            
 
         return view('question',['question' => $requestedQ, 'answer' => $requestedA , 'best'=> $bestA]);
     }
@@ -94,6 +114,7 @@ class ForumController extends Controller
 
        $bestanswer->name = $requestedA->name;
        $bestanswer->content = $requestedA->content;
+       //$bestanswer->likes = $requestedA->likes;
        
 
         error_log($bestanswer); //used to debug, will show the answer in terminal

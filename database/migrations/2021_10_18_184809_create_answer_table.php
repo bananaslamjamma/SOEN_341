@@ -20,6 +20,7 @@ class CreateAnswerTable extends Migration
             $table->integer('qid');
             $table->string('name');
             $table->string('content');
+            $table->integer('likes')->default('1');
         });
     }
 
