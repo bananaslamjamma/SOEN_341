@@ -8,9 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Answer extends Model
 {
     //use HasFactory; dont know what this is
-    public function likes()
-{
-    return $this->hasMany(Like::class);
+    public function bestanswer(){
+    return $this->hasOne(Bestanswer::class, 'aid', 'qid');
 }
 
 public function likedby(User $user)

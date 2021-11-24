@@ -7,5 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Bestanswer extends Model
 {
-    use HasFactory;
+    public function answer(){
+        //ignore this
+        return $this->belongsTo(Answer::class, 'id', 'aid');
+    }
+
 }
