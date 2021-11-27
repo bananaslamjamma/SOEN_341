@@ -4,11 +4,16 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-
-
+use Laravel\Scout\Searchable;
 
 class Question extends Model 
 {
+    use HasFactory, Searchable;
     
-    //use HasFactory; dont know what this is
+    const SEARCHABLE_FIELDS = ['id', 'title', 'content'];
+    
+    public function toSearchableArray()
+    {
+        return $this->only(self::SEARCHABLE_FIELDS);
+    }
 }
