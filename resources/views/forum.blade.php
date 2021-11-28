@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title> Soen 341 homepage </title>
-<meta charset="UTF-8"/>
-<link rel="stylesheet" href="/css/main.css">
-
+    <title> SOEN 341 Forum </title>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 
 <body>
 <header>
 
-<div class="content">
-<h2 class="left">Soen OverFlow</h2>
-
-
-<nav>
-                <ul>
-
+        <div class="container">
+            <div class="navbar"; style="border: solid black 2px;">
+                <div class="logo">
+                    <a href='home'><img src={{URL('/images/home.png')}} width="20px"></a>
+                </div>
+                <nav>
+                    <ul id="MenuItems">
                     <li><a href="/home"> Home</a></li>
                     <li><a href="/forum"> Forum</a></li>
-                    <li><a href=""> Team Info</a></li>
                     <!-- Right Side Of Navbar -->
 
                     <!-- Authentication Links -->
@@ -55,84 +56,73 @@
                     </li>
                     @endguest
 
-                    <li><a href="/profile"> Profile</a></li>
+                    </ul>
+                </nav>
+                <img src={{URL('/images/menu.png')}} class="menu-icon" onclick="menutoggle()">
+           </div> 
+        </div>
 
-                </ul>
-            </nav>
-
-
-</div>
-
-<style>
-.triangle-up {
-
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-bottom: 10px solid #555;
-}
-.triangle-down {
-
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-top: 10px solid #555;
-}
-</style>
-</header>
+    </header>
 
 
- <div style="text-align:center;color:white;" >
+<div style="text-align:center;background:#F7F9F7;color:red;" >
 @if (Auth::check()) 
 
-<h1 > Ask a question</h1> 
+<h1 style="text-decoration:underline; background: white; color: black;border: solid black 2px;"> Ask a question</h1> 
 <form action="/forum" method="post">
 @csrf
-<input style="height:40px;width:200px;font-size:30px" type="text" placeholder="Title" id="title" name="title">
+<input style="height:40px;width:200px;font-size:12px;border: solid black 2px;" type="text" placeholder="Title" id="title" name="title">
 <div>
-<input style="height:200px;width:1000px;font-size:50px;text-align:top" placeholder="Describe your issue" name="content" id="content" >
-</input>
-</div>
-<input type="submit" value="ASK">
+    <input style="height:200px;width:1000px;font-size:12px;text-align:left;border: solid black 2px;" placeholder="Describe your issue" name="content" id="content" >
+        <div class="form-btn">
+            <button type="submit" class="btn">Submit</button>
+        </div>
+    </input>
+</div>    
 </form>  
 
-@else{
+@else
     <h1 > You must be logged in to ask a question</h1> <br>
-    <a class="nav-link" href="{{ route('login') }}">Login</a>
+    <a class="nav-link" href="{{ route('login') }}" style="background:white;border: solid black 2px;">Login</a>
 
-}
 
 @endif
 </div>
 
-<pre>
-
-
-</pre>
-
-<div style="text-align:center;color:white;background:black">
-            <div class="content">
-                <div style="font-size:100px;">
+<div style="text-align:center;color:black;">
+            <div style="font-size:48px;background:#F7F9F7">
                     Questions
-                    <pre></pre>
-                </div>
-                
-
+            </div>     
+            <div class="content", style="text-align: left;">   
                 @foreach($questions as $questions)
-                  <div style="font-size:40px;
+                <div style="font-size:40px;
                             background-color: #F7F9F7;
-                            border: 1px solid #94BD53;
-                            color: inherit;
                             padding: 5px;
                             margin: 0px;
-                            color:black">
-                  issue <a href="/forum/{{ $questions->id}}"> {{ $questions->id}}</a> from {{ $questions->name}} - {{ $questions->title }} <br>
-                  
-                    <br>                
+                            page-align:left;">
+                  Question <a href="/forum/{{ $questions->id}}"> {{ $questions->id}}</a> posted by {{ $questions->name}} - {{ $questions->title }} <br>               
                 </div>
                 @endforeach
-
             </div>
         </div>
-
-
 </body>
 </html>
+
+<!--------- javascript for toggle menu --------->
+    
+      <script>
+        var MenuItems = document.getElementById("MenuItems");
+
+            MenuItems.style.maxHeight = "0px";
+
+            function menutoggle(){
+                if(MenuItems.style.maxHeight == "0px")
+                    {
+                        MenuItems.style.maxHeight = "200px";
+                    }
+                else
+                    {
+                        MenuItems.style.maxHeight = "0px";
+                    }
+            }
+        </script>
