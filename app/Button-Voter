@@ -1,7 +1,0 @@
-var button = document.getElementById("positive"),
-    totalvotes = 0;
-button.onclick = function() {
-    totalvotes += 1;
-    button.innerHTML = "Adequate Answer: " + counter;
-};
-
