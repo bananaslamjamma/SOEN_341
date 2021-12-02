@@ -89,13 +89,6 @@ TestFunction{
 Steps all passed user story completed.
 }
 
-Creating the information section:
-TestFunction{
-
--Have a functional nav bar to switch pages
--Have a display page of the information on the contributors
-Steps not finished user story incomplete
-}
 
 Multiple Voting:
 TestFunction{
@@ -109,7 +102,7 @@ TestFunction{
 -Counter goes down
 -Reset and try to upvote downvote on the same answer
 -Counter stays
-Steps not finished user story incomplete
+Steps all passed user story completed.
 }
 Search functionality:
 TestFunction{
@@ -118,14 +111,6 @@ TestFunction{
 -Type information
 -Hit enter
 -Display of questions/answers based on the information typed
-Steps not finished user story incomplete
-}
-Create user profile view:
-TestFunction{
-
--Have a nav bar to access user profile
--Click on profile
--Interactive Information displayed
-Steps not finished user story incomplete
+Steps all passed user story completed.
 }
 
