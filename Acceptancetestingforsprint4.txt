@@ -1,0 +1,115 @@
+Acceptance Testing for the user stories:
+Core feature asking and answering questions:
+TestFunction{
+-Access forum page
+-Type a question and enter proper information
+-Hit the button
+-Reset and go to the asked question
+-Type an answer to the question
+-hit the button
+-Check if both question and answer are displayed and saved
+Steps all passed user story completed.
+}
+Core feature accepting the best answer:
+TestFunction{
+
+-Access forum page
+-Select a question with an answer
+-The answer gets accepted as the best answer
+Steps all passed user story completed.
+}
+Core feature voting on the answers :
+TestFunction{
+
+-Access forum
+-Choose a question with answer
+-Click upvote or downvote on the answer of the question
+-Counter changes
+(Refer to multiple voting for more details)
+Steps all passed user story completed.
+}
+
+Create Login and logout pages:
+TestFunction{
+-Have a functional nav bar to switch pages
+-Have a login display page
+Steps all passed user story completed.
+}
+
+Verify Login:
+TestFunction{
+- Enter username and password
+- Click the login button
+- Proper username and password used 
+- login confirmed
+Steps all passed user story completed.
+}
+
+Create registration page:
+TestFunction{
+
+-Have a functional nav bar to switch pages
+-Have a registration display page
+Steps all passed user story completed.
+}
+
+Verify Registration data:
+TestFunction{
+
+-Enter Name, Email, and password
+-Confirm password
+-Click Register button
+-Get logged in
+Steps all passed user story completed.
+}
+
+Create Forum Page:
+TestFunction{
+
+-Have a functional nav bar to switch pages
+-Have a forum display page with questions/answers
+Steps all passed user story completed.
+}
+
+Create homepage:
+TestFunction{
+
+-Have a functional nav bar to switch pages
+-Have a general main page when opening the browser
+Steps all passed user story completed.
+}
+
+Reply functionality:
+TestFunction{
+
+-Have a display to enter the answer
+-Write down the answer
+-Click the button
+-Check for if the answer is posted to the question
+Steps all passed user story completed.
+}
+
+
+Multiple Voting:
+TestFunction{
+
+-Go to the forum
+-Upvote an answer
+-Counter goes up
+-Reset and try to upvote again on the same answer
+-Counter stays
+-Downvote an answer
+-Counter goes down
+-Reset and try to upvote downvote on the same answer
+-Counter stays
+Steps all passed user story completed.
+}
+Search functionality:
+TestFunction{
+
+-Have a nav bar to enter information to search
+-Type information
+-Hit enter
+-Display of questions/answers based on the information typed
+Steps all passed user story completed.
+}
