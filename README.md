@@ -70,3 +70,6 @@ HTML,CSS,Javascript,php
 * php
 * Laravel Framework
 
+# Naming Conventions
+  Referenced: https://webdevetc.com/blog/laravel-naming-conventions/
+
