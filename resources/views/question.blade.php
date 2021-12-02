@@ -144,7 +144,7 @@
 {{-- simple view of all the answers--}}
 <div style="text-align:center;color:black" >
 @foreach($answer as $answer)
-                  <div style="font-size:50px;
+                  <form style="font-size:50px;
                                 background-color: #F7F9F7;
                                 border: 1px solid #94BD53;
                                 padding: 50px;
@@ -200,7 +200,7 @@
                 </div>
                 @endforeach
 
-</div>
+</form>
 
 
 </body>
